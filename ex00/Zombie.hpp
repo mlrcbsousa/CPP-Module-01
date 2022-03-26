@@ -6,12 +6,14 @@
 /*   By: msousa <mlrcbsousa@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/26 17:58:00 by msousa            #+#    #+#             */
-/*   Updated: 2022/03/26 18:00:24 by msousa           ###   ########.fr       */
+/*   Updated: 2022/03/26 18:48:35 by msousa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef __ZOMBIE_H__
 #define __ZOMBIE_H__
+
+# include <iostream>
 
 // ************************************************************************** //
 //                               Zombie Class                                 //
@@ -22,24 +24,18 @@ class Zombie {
 
 public:
 
-	typedef Zombie		t;
-
-	// static int	getNbAccounts( void );
-
-	Zombie( void );
+	Zombie( std::string name );
 	~Zombie( void );
 
-	// void	displayStatus( void ) const;
-
+	void			announce( void );
 
 private:
 
-	// static int	_nbAccounts;
-
-	// static void	_displayTimestamp( void );
-
-	// int				_accountIndex;
+	std::string		_name;
 
 };
+
+Zombie* newZombie( std::string name );
+void randomChump( std::string name );
 
 #endif /* __ZOMBIE_H__ */
