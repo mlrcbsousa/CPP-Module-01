@@ -6,7 +6,7 @@
 /*   By: msousa <mlrcbsousa@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/26 17:58:00 by msousa            #+#    #+#             */
-/*   Updated: 2022/03/26 19:16:46 by msousa           ###   ########.fr       */
+/*   Updated: 2022/03/27 11:35:22 by msousa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ public:
 	~Zombie( void );
 
 	void			announce( void );
+	void 			setName(std::string name);
 
 private:
 

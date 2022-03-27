@@ -6,7 +6,7 @@
 /*   By: msousa <mlrcbsousa@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/26 17:57:39 by msousa            #+#    #+#             */
-/*   Updated: 2022/03/26 19:17:37 by msousa           ###   ########.fr       */
+/*   Updated: 2022/03/27 11:36:18 by msousa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,9 @@ Zombie::~Zombie( void )
 void	Zombie::announce( void )
 {
 	std::cout << _name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+}
+
+void 	Zombie::setName(std::string name)
+{
+    _name = name;
 }
