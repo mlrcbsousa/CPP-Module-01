@@ -6,7 +6,7 @@
 /*   By: msousa <mlrcbsousa@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/26 17:58:00 by msousa            #+#    #+#             */
-/*   Updated: 2022/03/27 13:21:23 by msousa           ###   ########.fr       */
+/*   Updated: 2022/03/27 18:42:23 by msousa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,15 @@ class Weapon {
 
 public:
 
-	Weapon( void );
+	Weapon( std::string type );
 	~Weapon( void );
+
+	std::string const &		getType( void ) const;
+	void					setType( std::string type );
 
 private:
 
+	std::string				_type;
 
 };
 

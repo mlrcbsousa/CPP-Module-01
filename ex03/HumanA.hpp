@@ -6,7 +6,7 @@
 /*   By: msousa <mlrcbsousa@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/26 17:58:00 by msousa            #+#    #+#             */
-/*   Updated: 2022/03/27 13:21:29 by msousa           ###   ########.fr       */
+/*   Updated: 2022/03/27 21:50:20 by msousa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,15 @@ class HumanA {
 
 public:
 
-	HumanA( void );
+	HumanA( std::string name, Weapon& weapon );
 	~HumanA( void );
 
+	void			attack( void ) const;
+
 private:
+
+	std::string		_name;
+	Weapon&			_weapon;
 
 };
 
