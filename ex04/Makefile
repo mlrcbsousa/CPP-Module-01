@@ -6,7 +6,7 @@
 #    By: msousa <mlrcbsousa@gmail.com>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/21 21:26:04 by msousa            #+#    #+#              #
-#    Updated: 2022/03/27 22:18:27 by msousa           ###   ########.fr        #
+#    Updated: 2022/03/28 20:48:14 by msousa           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ OBJ			= ${SRC:.cpp=.o}
 SRC			= main.cpp
 INC			= main.hpp
 
-NAME		= sed
+NAME		= replace
 
 ${NAME}:	${OBJ}
 					${CC} ${CFLAGS} ${OBJ} -o $@
@@ -28,7 +28,10 @@ ${NAME}:	${OBJ}
 all:			${NAME}
 
 test:			${NAME}
-					-./${NAME}
+					${RM} empty_file.replace file.replace
+					-./${NAME} no_file "s1" "s2"
+					-./${NAME} empty_file "s1" "s2"
+					-./${NAME} file "ut" "poney"
 
 clean:
 					${RM} ${OBJ}
