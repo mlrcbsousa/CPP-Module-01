@@ -6,7 +6,7 @@
 /*   By: msousa <mlrcbsousa@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/26 17:56:49 by msousa            #+#    #+#             */
-/*   Updated: 2022/03/28 20:50:41 by msousa           ###   ########.fr       */
+/*   Updated: 2022/03/28 21:01:10 by msousa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ void    replace(std::string& line, const std::string& s1, const std::string& s2)
 	{
 		size_t	i = line.find(s1, start);
 
-		if (i == std::string::npos)
+		// why the exttra newline
+		if (i == std::string::npos || !line.length())
 			break ;
 
 		line = line.substr(0, i) + s2 + line.substr(i + s1.length());
