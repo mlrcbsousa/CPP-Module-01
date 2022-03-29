@@ -6,7 +6,7 @@
 /*   By: msousa <mlrcbsousa@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/26 17:58:00 by msousa            #+#    #+#             */
-/*   Updated: 2022/03/29 20:56:40 by msousa           ###   ########.fr       */
+/*   Updated: 2022/03/29 21:27:06 by msousa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,6 @@
 # define LOG(x) std::cout << x << std::endl
 # define ERROR(x) std::cerr << "Error: " << x << std::endl
 
-#define CALL(object, member_pointer) ((object).*(member_pointer))
+# define CALL(object, member_pointer) ((object).*(member_pointer))
 
 #endif /* __MAIN_H__ */

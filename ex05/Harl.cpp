@@ -14,13 +14,13 @@
 
 void	Harl::complain( std::string level_name )
 {
-	static level_def definitions[4] = {
-		{ "debug", &Harl::debug },
-		{ "info", &Harl::info },
-		{ "warning", &Harl::warning },
-		{ "error", &Harl::error }
+	static s_level definitions[4] = {
+		{ "debug", 		&Harl::debug },
+		{ "info", 		&Harl::info },
+		{ "warning", 	&Harl::warning },
+		{ "error", 		&Harl::error }
 	};
-	level_fn level = NULL;
+	t_level level = NULL;
 
 	for (size_t i = 0; i < 4; i++) {
 		if (definitions[i].name == level_name) {

@@ -21,11 +21,9 @@
 
 class Harl {
 
-
 public:
 
 	void	complain( std::string level );
-
 
 private:
 
@@ -36,12 +34,11 @@ private:
 
 };
 
-typedef void	(Harl::*level_fn)( void );
+typedef void	(Harl::*t_level)( void );
 
-struct level_def
-{
+struct s_level {
 	std::string		name;
-	level_fn 		level;
+	t_level			level;
 };
 
 #endif /* __HARL_H__ */
