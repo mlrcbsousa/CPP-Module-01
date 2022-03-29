@@ -15,10 +15,10 @@
 void	Harl::complain( std::string level_name )
 {
 	static s_level definitions[4] = {
-		{ "debug", 		&Harl::debug },
-		{ "info", 		&Harl::info },
-		{ "warning", 	&Harl::warning },
-		{ "error", 		&Harl::error }
+		{ "DEBUG", 		&Harl::debug },
+		{ "INFO", 		&Harl::info },
+		{ "WARNING", 	&Harl::warning },
+		{ "ERROR", 		&Harl::error }
 	};
 	t_level level = NULL;
 
