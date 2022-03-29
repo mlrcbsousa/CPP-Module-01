@@ -35,6 +35,8 @@ ex01/zombie
 ex02/reference
 ex03/violence
 ex04/replace
+ex05/harl
+ex06/harlFilter
 
 # Tests
 ex04/empty_file.replace
