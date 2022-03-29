@@ -6,7 +6,7 @@
 /*   By: msousa <mlrcbsousa@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/26 17:56:49 by msousa            #+#    #+#             */
-/*   Updated: 2022/03/28 21:01:10 by msousa           ###   ########.fr       */
+/*   Updated: 2022/03/29 19:42:39 by msousa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,7 @@ void    replace(std::string& line, const std::string& s1, const std::string& s2)
 	{
 		size_t	i = line.find(s1, start);
 
-		// why the exttra newline
-		if (i == std::string::npos || !line.length())
+		if (i == std::string::npos)
 			break ;
 
 		line = line.substr(0, i) + s2 + line.substr(i + s1.length());
@@ -44,7 +43,7 @@ int	main( int argc, char* argv[] )
     }
 
 	std::string     filename(argv[1]);
-    std::ofstream   out((filename + ".replace").c_str());
+    std::ofstream   out((filename + ".replace").c_str(), std::ios::binary);
 
     if (out.fail()) {
 		ERROR("creating file");
@@ -64,7 +63,8 @@ int	main( int argc, char* argv[] )
         std::string 	line;
         std::getline(in, line);
 
-		replace(line, s1, s2);
+		if (line.length())
+			replace(line, s1, s2);
 
 		out << line << std::endl;
     }
