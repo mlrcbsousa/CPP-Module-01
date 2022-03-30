@@ -6,7 +6,7 @@
 #    By: msousa <mlrcbsousa@gmail.com>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/21 21:26:04 by msousa            #+#    #+#              #
-#    Updated: 2022/03/29 21:30:41 by msousa           ###   ########.fr        #
+#    Updated: 2022/03/30 22:23:44 by msousa           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ ${NAME}:	${OBJ}
 all:			${NAME}
 
 test:			${NAME}
-					-./${NAME}
+					-./tests.sh
 
 clean:
 					${RM} ${OBJ}

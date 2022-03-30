@@ -37,7 +37,6 @@ void	Harl::complain( std::string level_name )
 
 void	Harl::debug( void )
 {
-	LOG("");
 	LOG("[DEBUG]");
 	LOG("I love having extra bacon for my 7XL-double-cheese-triple-pickle-");
 	LOG("special- ketchup burger. I really do!");
@@ -46,7 +45,6 @@ void	Harl::debug( void )
 
 void	Harl::info( void )
 {
-	LOG("");
 	LOG("[INFO]");
 	LOG("I cannot believe adding extra bacon costs more money. You didn’t put ");
 	LOG("enough bacon in my burger! If you did, I wouldn’t be asking for more!");
@@ -55,7 +53,6 @@ void	Harl::info( void )
 
 void	Harl::warning( void )
 {
-	LOG("");
 	LOG("[WARNING]");
 	LOG("I think I deserve to have some extra bacon for free. I’ve been ");
 	LOG("coming for years whereas you started working here since last month.");
@@ -64,7 +61,6 @@ void	Harl::warning( void )
 
 void	Harl::error( void )
 {
-	LOG("");
 	LOG("[ERROR]");
 	LOG("This is unacceptable! I want to speak to the manager now.");
 	LOG("");

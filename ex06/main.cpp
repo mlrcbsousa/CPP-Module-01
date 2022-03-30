@@ -6,7 +6,7 @@
 /*   By: msousa <mlrcbsousa@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/26 17:56:49 by msousa            #+#    #+#             */
-/*   Updated: 2022/03/30 22:11:46 by msousa           ###   ########.fr       */
+/*   Updated: 2022/03/30 22:24:19 by msousa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	main( int argc, char *argv[] )
 {
 	if (argc != 2) {
-		LOGERR("arguments <filename> <s1> <s2> required");
+		LOGERR("argument <level> required");
 		return 1;
 	}
 
@@ -38,20 +38,20 @@ int	main( int argc, char *argv[] )
 			harl.complain("WARNING");
 			harl.complain("ERROR");
 			break ;
-		case INFO  :
+		case INFO :
 			harl.complain("INFO");
 			harl.complain("WARNING");
 			harl.complain("ERROR");
 			break ;
-		case WARNING	:
+		case WARNING :
 			harl.complain("WARNING");
 			harl.complain("ERROR");
 			break ;
-		case ERROR  :
+		case ERROR :
 			harl.complain("ERROR");
 			break ;
 		default :
-         	LOGERR("level " + level + " doesn't exist");
+         	LOG("[ Probably complaining about insignificant problems ]");
 			break ;
 	}
 
