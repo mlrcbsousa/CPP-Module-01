@@ -6,7 +6,7 @@
 /*   By: msousa <mlrcbsousa@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/26 17:56:49 by msousa            #+#    #+#             */
-/*   Updated: 2022/03/30 22:24:19 by msousa           ###   ########.fr       */
+/*   Updated: 2022/03/30 22:43:01 by msousa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,19 +34,10 @@ int	main( int argc, char *argv[] )
 	switch(i) {
 		case DEBUG :
 			harl.complain("DEBUG");
-			harl.complain("INFO");
-			harl.complain("WARNING");
-			harl.complain("ERROR");
-			break ;
 		case INFO :
 			harl.complain("INFO");
-			harl.complain("WARNING");
-			harl.complain("ERROR");
-			break ;
 		case WARNING :
 			harl.complain("WARNING");
-			harl.complain("ERROR");
-			break ;
 		case ERROR :
 			harl.complain("ERROR");
 			break ;
