@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "main.hpp"
+#include "Harl.hpp"
 
 void	Harl::complain( std::string level_name )
 {

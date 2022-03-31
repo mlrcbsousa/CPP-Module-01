@@ -13,7 +13,13 @@
 #ifndef __HARL_H__
 #define __HARL_H__
 
-# include "main.hpp"
+# include <iostream>
+
+# define LOG(x) std::cout << x << std::endl
+# define ERROR(x) std::cerr << "Error: " << x << std::endl
+
+# define CALL(object, member_pointer) ((object).*(member_pointer))
+
 
 // ************************************************************************** //
 //                               Harl Class                                 //
