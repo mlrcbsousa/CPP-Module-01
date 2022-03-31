@@ -6,7 +6,7 @@
 /*   By: msousa <mlrcbsousa@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/26 17:56:49 by msousa            #+#    #+#             */
-/*   Updated: 2022/03/29 19:42:39 by msousa           ###   ########.fr       */
+/*   Updated: 2022/03/31 19:55:38 by msousa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,13 +58,12 @@ int	main( int argc, char* argv[] )
         return 4;
     }
 
-	while (!in.eof())
+	while (in.good())
 	{
         std::string 	line;
         std::getline(in, line);
 
-		if (line.length())
-			replace(line, s1, s2);
+		replace(line, s1, s2);
 
 		out << line << std::endl;
     }
