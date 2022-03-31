@@ -6,11 +6,11 @@
 /*   By: msousa <mlrcbsousa@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/27 13:10:27 by msousa            #+#    #+#             */
-/*   Updated: 2022/03/27 21:51:03 by msousa           ###   ########.fr       */
+/*   Updated: 2022/03/31 19:44:25 by msousa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "main.hpp"
+#include "HumanA.hpp"
 
 HumanA::HumanA( std::string name, Weapon& weapon )
 	: _name(name), _weapon(weapon)

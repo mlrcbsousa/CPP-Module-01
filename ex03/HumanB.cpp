@@ -6,11 +6,11 @@
 /*   By: msousa <mlrcbsousa@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/27 13:20:53 by msousa            #+#    #+#             */
-/*   Updated: 2022/03/27 21:58:38 by msousa           ###   ########.fr       */
+/*   Updated: 2022/03/31 19:47:09 by msousa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "main.hpp"
+#include "HumanB.hpp"
 
 HumanB::HumanB( std::string name ) : _name(name) { /* No-op */ }
 HumanB::~HumanB( void ) { /* No-op */ }
