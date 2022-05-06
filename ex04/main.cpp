@@ -6,27 +6,11 @@
 /*   By: msousa <mlrcbsousa@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/26 17:56:49 by msousa            #+#    #+#             */
-/*   Updated: 2022/03/31 19:55:38 by msousa           ###   ########.fr       */
+/*   Updated: 2022/05/06 23:22:17 by msousa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "main.hpp"
-
-void    replace(std::string& line, const std::string& s1, const std::string& s2)
-{
-    size_t	start = 0;
-
-	while (true)
-	{
-		size_t	i = line.find(s1, start);
-
-		if (i == std::string::npos)
-			break ;
-
-		line = line.substr(0, i) + s2 + line.substr(i + s1.length());
-		start = i + s2.length();
-	}
-}
 
 int	main( int argc, char* argv[] )
 {
@@ -35,17 +19,17 @@ int	main( int argc, char* argv[] )
 		return 1;
 	}
 
-	std::ifstream   in(argv[1], std::ifstream::in);
+	std::ifstream   in(argv[1]);
 
-	if (in.fail()) {
+	if (!in.is_open() || in.fail()) {
 		ERROR("opening file");
         return 2;
     }
 
 	std::string     filename(argv[1]);
-    std::ofstream   out((filename + ".replace").c_str(), std::ios::binary);
+    std::ofstream   out((filename + ".replace").c_str());
 
-    if (out.fail()) {
+    if (!out.is_open() || out.fail()) {
 		ERROR("creating file");
         return 3;
     }
@@ -58,15 +42,22 @@ int	main( int argc, char* argv[] )
         return 4;
     }
 
-	while (in.good())
+	std::string 	line;
+
+	while (getline(in, line))
 	{
-        std::string 	line;
-        std::getline(in, line);
+		int start = 0;
+		while (true)
+		{
+			size_t i = line.find(s1, start);
+			if (i == std::string::npos)
+				break ;
 
-		replace(line, s1, s2);
-
-		out << line << std::endl;
-    }
+			out << line.substr(start, i - start) << s2;
+			start = i + s1.length();
+		}
+		out << &line[start] << std::endl;
+	}
 
     in.close();
     out.close();

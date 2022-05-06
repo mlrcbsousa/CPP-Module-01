@@ -6,7 +6,7 @@
 #    By: msousa <mlrcbsousa@gmail.com>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/21 21:26:04 by msousa            #+#    #+#              #
-#    Updated: 2022/04/20 23:33:06 by msousa           ###   ########.fr        #
+#    Updated: 2022/05/06 22:40:15 by msousa           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ CC			= c++
 RM			= rm -f
 OBJ			= ${SRC:.cpp=.o}
 SRC			= main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
-INC			= main.hpp Weapon.hpp HumanA.hpp HumanB.hpp
+INC			= Weapon.hpp HumanA.hpp HumanB.hpp
 
 NAME		= violence
 

@@ -22,6 +22,12 @@
 
 # define COUNT 4
 
+enum e_level {
+	DEBUG,
+	INFO,
+	WARNING,
+	ERROR,
+};
 
 // ************************************************************************** //
 //                               Harl Class                                 //

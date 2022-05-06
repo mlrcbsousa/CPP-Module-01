@@ -6,11 +6,12 @@
 /*   By: msousa <mlrcbsousa@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/26 17:56:49 by msousa            #+#    #+#             */
-/*   Updated: 2022/03/27 20:58:39 by msousa           ###   ########.fr       */
+/*   Updated: 2022/05/06 22:40:35 by msousa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "main.hpp"
+#include "HumanA.hpp"
+#include "HumanB.hpp"
 
 int	main( void )
 {
